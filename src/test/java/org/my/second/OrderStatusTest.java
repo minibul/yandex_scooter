@@ -26,9 +26,8 @@ public class OrderStatusTest extends BaseUITest{
 
     @Test
     public void checkOrderStatusForNonExistingOrder2() {
-        driver.get(MainPage.URL);
-
         boolean isOrderNotFoundImageDisplayed = new MainPage(driver)
+                .open()
                 .clickOrderStatusButton()
                 .enterOrderNumber("1")
                 .clickSearchOrderButton()
